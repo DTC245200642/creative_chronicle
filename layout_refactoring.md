@@ -1,0 +1,4 @@
+# Báo cáo Phân tích và Tái cấu trúc Layout - CreativeChronicle
+
+- **Tác hại của Position: Absolute trong Responsive Design:** Khi gán `position: absolute`, các phần tử bị đưa ra khỏi luồng tài liệu chuẩn (document flow), khiến phần tử cha mất đi chiều cao thực tế (collapse). Khi kích thước màn hình thay đổi hoặc xem trên thiết bị di động, nội dung bên dưới (như văn bản bài viết) sẽ không dịch chuyển mà bị các ảnh cố định đè lên thảm họa.
+- **Lý do CSS Grid là giải pháp cứu cánh:** CSS Grid hoạt động dựa trên không gian 2 chiều (hàng và cột), tự động quản lý chiều cao và bố cục mà không cần tính toán pixel hay cố định chiều cao thủ công. Với các thuộc tính như `grid-row: span 2` và cơ chế Media Query đơn giản, Grid giúp sắp xếp thư viện ảnh (Mosaic) hiển thị hoàn hảo, linh hoạt co giãn trên cả Desktop lẫn Mobile mà không lo xung đột văn bản.
